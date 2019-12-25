@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Typography, Grid, Box, Container } from "@material-ui/core";
-import { makeStyles, withStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/styles";
 import topphoto from "../assets/topphoto.png";
 import arjunpic from "../assets/arjunpic.jpg";
 const useStyles = makeStyles(theme => ({
@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: `url(${topphoto})`,
     minHeight: 400,
     backgroundColor: "#152238", // Average color of the background image.
-    backgroundPosition: "center"
+    backgroundPosition: "right"
   },
   button: {
     minWidth: 200
