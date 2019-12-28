@@ -62,45 +62,49 @@ function Welcome(props) {
           container
           justify="flex-start"
         >
-          <Grid item className={classes.nameTitle}>
-            <Typography
-              className={classes.typography1}
-              align="center"
-              variant="h2"
-              marked="center"
-            >
-              Hello, I'm Arjun Sedani
-            </Typography>
+          <Grid item>
+            <Box m="4rem" />
+            <Container maxWidth="md">
+              <Typography
+                className={classes.typography1}
+                align="center"
+                variant="h2"
+                marked="center"
+              >
+                Hello, I'm Arjun Sedani
+              </Typography>
+            </Container>
           </Grid>
-          <Grid item className={classes.nameTitle2}>
-            <Typography
-              color="inherit"
-              align="center"
-              variant="h5"
-              className={classes.typography1}
-            >
-              React Developer | React Developer | UX Developer
-            </Typography>
+          <Grid item>
+            <Box m="1rem" />
+            <Container maxWidth="md">
+              <Typography
+                color="inherit"
+                align="center"
+                variant="h5"
+                className={classes.typography1}
+              >
+                React Developer | React Developer | UX Developer
+              </Typography>
+            </Container>
           </Grid>
-          <Grid item className={classes.nameTitle2}>
-            <Button
-              variant="outlined"
-              color="secondary"
-              onClick={() => handleScrollToStats()}
-            >
-              Learn More
-            </Button>
+          <Grid item>
+            <Box m="2rem" />
+            <Container>
+              <Button
+                variant="outlined"
+                color="secondary"
+                onClick={() => handleScrollToStats()}
+              >
+                Learn More
+              </Button>
+            </Container>
+            <Box m="1rem" />
           </Grid>
         </Grid>
       </div>
       <Box m="4rem" />
-      <Grid
-        alignItems="center"
-        direction="column"
-        container
-        justify="center"
-        spacing={2}
-      >
+      <Grid alignItems="center" direction="column" container justify="center">
         <Grid item>
           <Typography align="center" variant="h6" marked="center">
             About Me
@@ -116,13 +120,7 @@ function Welcome(props) {
         </Grid>
       </Grid>
       <Box m="4rem" />
-      <Grid
-        alignItems="center"
-        direction="column"
-        container
-        justify="center"
-        spacing={2}
-      >
+      <Grid alignItems="center" direction="column" container justify="center">
         <Grid item>
           <Container maxWidth="md">
             <Typography align="flex-start" variant="body2" marked="flex-start">
@@ -160,13 +158,7 @@ function Welcome(props) {
       </Grid>
 
       <Box m="4rem" />
-      <Grid
-        alignItems="center"
-        direction="column"
-        container
-        justify="center"
-        spacing={2}
-      >
+      <Grid alignItems="center" direction="column" container justify="center">
         <Grid item>
           <Typography align="center" variant="h6" marked="center">
             Achievements
@@ -174,13 +166,7 @@ function Welcome(props) {
           <hr className={classes.aboutMe} />
         </Grid>
       </Grid>
-      <Grid
-        alignItems="center"
-        direction="column"
-        container
-        justify="center"
-        spacing={2}
-      >
+      <Grid alignItems="center" direction="column" container justify="center">
         <Grid item>
           <Container maxWidth="md">
             <Typography align="flex-start" variant="body2" marked="flex-start">
