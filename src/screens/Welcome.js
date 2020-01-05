@@ -20,6 +20,7 @@ import { makeStyles } from "@material-ui/styles";
 import topphoto from "../assets/topphoto.png";
 import arjunpic from "../assets/arjunpic.jpg";
 import card2 from "../assets/card2.jpeg";
+import unifiedgamification from "../assets/unifiedgamification.png";
 import CardTravel from "@material-ui/icons/CardTravel";
 import Extension from "@material-ui/icons/Extension";
 import Fingerprint from "@material-ui/icons/Fingerprint";
@@ -29,7 +30,10 @@ import Place from "@material-ui/icons/Place";
 import Language from "@material-ui/icons/Language";
 import styles from "../components/MaterialComponents/styles/materialStyles/views/dashboardStyle.js";
 import Timeline from "../components/MaterialComponents/Timeline/Timeline.js";
-import scenegltf from "../assets/scene.glb";
+import Slider from "react-slick";
+import styled, { css } from "styled-components";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const useStyles = makeStyles(theme => ({
   ...styles,
@@ -39,6 +43,14 @@ const useStyles = makeStyles(theme => ({
     minHeight: 400,
     backgroundColor: "#152238", // Average color of the background image.
     backgroundPosition: "right"
+  },
+  paddingCarousel: {
+    paddingLeft: "20px",
+    paddingRight: "20px"
+  },
+  iconimage: {
+    width: "100%",
+    height: "400px"
   },
   button: {
     minWidth: 200
@@ -72,6 +84,47 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const PrevArrow = styled.div`
+  display: block;
+  position: absolute;
+  &.slick-prev {
+    left: 11px;
+    z-index: 10;
+  }
+  &.slick-prev::before {
+    color: black;
+  }
+  &.slick-prev::after {
+    color: black;
+  }
+  &.slick-prev:hover::before {
+    color: black;
+  }
+  &.slick-prev:hover::after {
+    color: black;
+  }
+`;
+
+const NextArrow = styled.div`
+  display: block;
+  position: absolute;
+  &.slick-next {
+    right: 5px;
+  }
+  &.slick-next::before {
+    color: black;
+  }
+  &.slick-next::after {
+    color: black;
+  }
+  &.slick-next:hover::before {
+    color: black;
+  }
+  &.slick-next:hover::after {
+    color: black;
+  }
+`;
+
 function Welcome(props) {
   const classes = useStyles();
 
@@ -88,33 +141,57 @@ function Welcome(props) {
       inverted: true,
       badgeColor: "danger",
       badgeIcon: CardTravel,
-      title: "Some Title",
+      title: "Health point Hospital Management Portal ",
       titleColor: "danger",
       body: (
         <p>
-          Wifey made the best Father{"'"}s Day meal ever. So thankful so happy
-          so blessed. Thank you for making my family We just had fun with the
-          “future” theme !!! It was a fun night all together ... The always rude
-          Kanye Show at 2am Sold Out Famous viewing @ Figueroa and 12th in
-          downtown.
+          1.Developed health care theme based web app for clients such as
+          Walmart and Optimis by integrating multiple EMR and hospital
+          management system capable to handle over 4000 clinics and over 2
+          million Providers across US.
+          <br />
+          2.Developed progressive web app compatible with multiple browsers and
+          mobile as well
+          <br />
+          3.Used latest React features like react hooks, ES7 and developing
+          custom hooks in react hooks.
+          <br />
+          4.Developed landing pages, dashboards and online applications using
+          ReactJS, styled-components and developing common components from
+          scratch
         </p>
-      ),
-      footerTitle: "11 hours ago via Twitter"
+      )
+      // footerTitle: "11 hours ago via Twitter"
     },
     {
       // Second story
       inverted: true,
       badgeColor: "success",
       badgeIcon: Extension,
-      title: "Another One",
+      title: "Propertygram",
       titleColor: "success",
       body: (
         <p>
-          Thank God for the support of my wife and real friends. I also wanted
-          to point out that it’s the first album to go number 1 off of
-          streaming!!! I love you Ellen and also my number one design rule of
-          anything I do from shoes to music to homes is that Kim has to like
-          it....
+          About Project: <br />
+          Propertygram is an attempt to build a gamification framework that can
+          be integrated into any property management software to gamify regular
+          tasks in the application.It also provides basic intelligence for task
+          allocation and analytics for measuring property managers
+          efficiency/work life balance and overall building health
+          <br />
+          Roles and Responsibilties: <br />
+          1.Developed gamification framework using React Native, Firebase
+          database, Python for Company level Innovation challenge and customer
+          meet during Period 1st January15th March 2019
+          <br />
+          2.Developing a new framework from scratch to support existing
+          application and data
+          <br />
+          3.Developing modal using ML and AI KNN to predict likes and dislikes
+          of property managers
+          <br />
+          4.Developing reusable components to be used throughout the new version
+          of application
         </p>
       )
     },
@@ -123,24 +200,69 @@ function Welcome(props) {
       inverted: true,
       badgeColor: "info",
       badgeIcon: Fingerprint,
-      title: "Another Title",
+      title: "CBRE Host Mobile ",
       titleColor: "info",
       body: (
         <div>
           <p>
-            Called I Miss the Old Kanye That’s all it was Kanye And I love you
-            like Kanye loves Kanye Famous viewing @ Figueroa and 12th in
-            downtown LA 11:10PM
+            About: <br /> CBRE Host is a smart building solutions app, one of
+            the premier customers is Nike, which is designed in SAAS model This
+            project includes way finding, people finding, room booking,
+            reminders, creating service requests and tracking status Technical
+            challenges include integration with multiple CMMS systems, AD and
+            Office Integration
           </p>
           <p>
-            What if Kanye made a song about Kanye Royère doesn{"'"}t make a
-            Polar bear bed but the Polar bear couch is my favorite piece of
-            furniture we own It wasn’t any Kanyes Set on his goals Kanye
+            Roles and Responsibilties: <br />
+            1.Developing React Native common components using glamorous-native,
+            HTML5,CSS
+            <br />
+            2.Fetching data from Rest APIs using Promise and setting data using
+            Redux
+            <br />
+            3.App navigation using react-navigation and react-hooks
           </p>
         </div>
       )
     }
   ];
+
+  const settings = {
+    dots: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
     <div>
@@ -304,17 +426,17 @@ function Welcome(props) {
           <hr className={classes.aboutMe} />
         </Grid>
       </Grid>
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={4}>
+      <Slider {...settings}>
+        <div className={classes.paddingCarousel}>
           <Card product className={classes.cardHover}>
-          <CardHeader image className={classes.cardHeaderHover}>
+            <CardHeader image className={classes.cardHeaderHover}>
               <a href="#pablo" onClick={e => e.preventDefault()}>
-              <iframe
-                // src="https://aframehome1.glitch.me/"
-                src="https://aframeheart.glitch.me/"
-                width="100%"
-                height="400px"
-              ></iframe>
+                <iframe
+                  // src="https://aframehome1.glitch.me/"
+                  src="https://aframeheart.glitch.me/"
+                  width="100%"
+                  height="400px"
+                ></iframe>
               </a>
             </CardHeader>
             <CardBody>
@@ -352,7 +474,212 @@ function Welcome(props) {
               </div>
               <h4 className={classes.cardProductTitle}>
                 <a href="#pablo" onClick={e => e.preventDefault()}>
-                  Office Studio
+                  A-Frame in Health Care
+                </a>
+              </h4>
+              <p className={classes.cardProductDesciprion}>
+                {/* The place is close to Metro Station and bus stop just 2 min by
+                walk and near to {'"'}Naviglio{'"'} where you can enjoy the
+                night life in London, UK. */}
+              </p>
+            </CardBody>
+            <CardFooter product>
+              <div className={classes.price}>{/* <h4>$1.119/night</h4> */}</div>
+              <div className={`${classes.stats} ${classes.productStats}`}>
+                {/* <Place /> London, UK */}
+              </div>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className={classes.paddingCarousel}>
+          <Card product className={classes.cardHover}>
+            <CardHeader image className={classes.cardHeaderHover}>
+              <a href="#pablo" onClick={e => e.preventDefault()}>
+                <iframe
+                  // src="https://aframehome1.glitch.me/"
+                  src="https://aframeappartment.glitch.me/"
+                  width="100%"
+                  height="400px"
+                ></iframe>
+              </a>
+            </CardHeader>
+            <CardBody>
+              <div className={classes.cardHoverUnder}>
+                <Tooltip
+                  id="tooltip-top"
+                  title="View"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="transparent" simple justIcon>
+                    <ArtTrack className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Edit"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="success" simple justIcon>
+                    <Refresh className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Remove"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="danger" simple justIcon>
+                    <Edit className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+              </div>
+              <h4 className={classes.cardProductTitle}>
+                <a href="#pablo" onClick={e => e.preventDefault()}>
+                  A-Frame in React in Real Estate
+                </a>
+              </h4>
+              <p className={classes.cardProductDesciprion}>
+                Smart Real Estate is a solution that integrates AR and VR to
+                assist real estate companies in creating immersive virtual
+                property tours and Augmented Property information for their end
+                customers and prospects thus helping them feel lifelike
+                simulation of properties from anywhere in the world.
+              </p>
+            </CardBody>
+            <CardFooter product>
+              <div className={classes.price}>{/* <h4>$1.119/night</h4> */}</div>
+              <div className={`${classes.stats} ${classes.productStats}`}>
+                {/* <Place /> London, UK */}
+              </div>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className={classes.paddingCarousel}>
+          <Card product className={classes.cardHover}>
+            <CardHeader image className={classes.cardHeaderHover}>
+              <a href="#pablo" onClick={e => e.preventDefault()}>
+                <img
+                  className={classes.iconimage}
+                  src={unifiedgamification}
+                  alt="..."
+                />
+              </a>
+            </CardHeader>
+            <CardBody>
+              <div className={classes.cardHoverUnder}>
+                <Tooltip
+                  id="tooltip-top"
+                  title="View"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="transparent" simple justIcon>
+                    <ArtTrack className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Edit"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="success" simple justIcon>
+                    <Refresh className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Remove"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="danger" simple justIcon>
+                    <Edit className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+              </div>
+              <h4 className={classes.cardProductTitle}>
+                <a href="#pablo" onClick={e => e.preventDefault()}>
+                  Propertygram
+                </a>
+              </h4>
+              <p className={classes.cardProductDesciprion}>
+                Propertygram is an attempt to build a gamification framework
+                that can be integrated into any property management software to
+                gamify regular tasks in the application.It also provides basic
+                intelligence for task allocation and analytics for measuring
+                property managers efficiency/work life balance and overall
+                building health.
+              </p>
+            </CardBody>
+            <CardFooter product>
+              <div className={classes.price}>{/* <h4>$1.119/night</h4> */}</div>
+              <div className={`${classes.stats} ${classes.productStats}`}>
+                {/* <Place /> London, UK */}
+              </div>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className={classes.paddingCarousel}>
+          <Card product className={classes.cardHover}>
+            <CardHeader image className={classes.cardHeaderHover}>
+              <a href="#pablo" onClick={e => e.preventDefault()}>
+                {/* <iframe
+                  // src="https://aframehome1.glitch.me/"
+                  src="https://www.youtube.com/watch?v=-1nqzARfQI4"
+                  width="100%"
+                  height="400px"
+                ></iframe> */}
+                <iframe
+                  src="http://media.licdn.com/embeds/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F-1nqzARfQI4&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-1nqzARfQI4&amp;type=text%2Fhtml&amp;schema=youtube"
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  title="video"
+                  width="100%"
+                  height="400px"
+                />
+              </a>
+            </CardHeader>
+            <CardBody>
+              <div className={classes.cardHoverUnder}>
+                <Tooltip
+                  id="tooltip-top"
+                  title="View"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="transparent" simple justIcon>
+                    <ArtTrack className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Edit"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="success" simple justIcon>
+                    <Refresh className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Remove"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="danger" simple justIcon>
+                    <Edit className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+              </div>
+              <h4 className={classes.cardProductTitle}>
+                <a href="#pablo" onClick={e => e.preventDefault()}>
+                  CBRE Host Mobile
                 </a>
               </h4>
               <p className={classes.cardProductDesciprion}>
@@ -363,24 +690,95 @@ function Welcome(props) {
             </CardBody>
             <CardFooter product>
               <div className={classes.price}>
-                <h4>$1.119/night</h4>
+                {/* <h4>$1.119/night</h4> */}
               </div>
               <div className={`${classes.stats} ${classes.productStats}`}>
-                <Place /> London, UK
+                {/* <Place /> London, UK */}
               </div>
             </CardFooter>
           </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
+        </div>
+        <div className={classes.paddingCarousel}>
           <Card product className={classes.cardHover}>
             <CardHeader image className={classes.cardHeaderHover}>
               <a href="#pablo" onClick={e => e.preventDefault()}>
               <iframe
-                // src="https://aframehome1.glitch.me/"
-                src="https://aframeappartment.glitch.me/"
-                width="100%"
-                height="400px"
-              ></iframe>
+                   src="https://www.youtube.com/embed/aR7nt91wRQk"
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  title="video"
+                  width="100%"
+                  height="400px"
+                />
+              </a>
+            </CardHeader>
+            <CardBody>
+              <div className={classes.cardHoverUnder}>
+                <Tooltip
+                  id="tooltip-top"
+                  title="View"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="transparent" simple justIcon>
+                    <ArtTrack className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Edit"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="success" simple justIcon>
+                    <Refresh className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Remove"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="danger" simple justIcon>
+                    <Edit className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+              </div>
+              <h4 className={classes.cardProductTitle}>
+                <a href="#pablo" onClick={e => e.preventDefault()}>
+                  Smart Real Estate
+                </a>
+              </h4>
+              <p className={classes.cardProductDesciprion}>
+                Smart Real Estate is a solution that integrates AR and VR to
+                assist real estate companies in creating immersive virtual
+                property tours and Augmented Property information for their end
+                customers and prospects thus helping them feel lifelike
+                simulation of properties from anywhere in the world.
+              </p>
+            </CardBody>
+            <CardFooter product>
+              <div className={classes.price}>
+                {/* <h4>$1.119/night</h4> */}
+              </div>
+              <div className={`${classes.stats} ${classes.productStats}`}>
+                {/* <Place /> London, UK */}
+              </div>
+            </CardFooter>
+          </Card>
+        </div>
+        <div className={classes.paddingCarousel}>
+          <Card product className={classes.cardHover}>
+            <CardHeader image className={classes.cardHeaderHover}>
+              <a href="#pablo" onClick={e => e.preventDefault()}>
+                <iframe
+                  // src="https://aframehome1.glitch.me/"
+                  src="https://aframeappartment.glitch.me/"
+                  width="100%"
+                  height="400px"
+                ></iframe>
               </a>
             </CardHeader>
             <CardBody>
@@ -429,15 +827,24 @@ function Welcome(props) {
             </CardBody>
             <CardFooter product>
               <div className={classes.price}>
-                <h4>$1.119/night</h4>
+                {/* <h4>$1.119/night</h4> */}
               </div>
               <div className={`${classes.stats} ${classes.productStats}`}>
-                <Place /> London, UK
+                {/* <Place /> London, UK */}
               </div>
             </CardFooter>
           </Card>
-        </GridItem>
-      </GridContainer>
+        </div>
+      </Slider>
+      <Box m="4rem" />
+      <Grid alignItems="center" direction="column" container justify="center">
+        <Grid item>
+          <Typography align="center" variant="h6" marked="center">
+            Projects
+          </Typography>
+          <hr className={classes.aboutMe} />
+        </Grid>
+      </Grid>
       <GridContainer>
         <GridItem xs={12} sm={12} md={4}></GridItem>
         <Timeline simple stories={widgetStories} />
