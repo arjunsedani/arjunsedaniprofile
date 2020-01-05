@@ -1,0 +1,20 @@
+// variables and mixins
+@import "genericscss/variables";
+@import "genericscss/mixins";
+@import "genericscss/shadows";
+
+// plugin css
+@import "genericscss/plugins/plugin-nouislider";
+@import "genericscss/plugins/plugin-perfect-scrollbar";
+@import "genericscss/plugins/plugin-react-datetime";
+@import "genericscss/plugins/plugin-react-bootstrap-sweetalert";
+@import "genericscss/plugins/plugin-react-chartist";
+@import "genericscss/plugins/plugin-react-big-calendar";
+@import "genericscss/plugins/plugin-react-jvectormap";
+@import "genericscss/plugins/plugin-react-table";
+@import "genericscss/plugins/plugin-react-tagsinput";
+
+// Core CSS
+@import "genericscss/misc";
+@import "genericscss/fileupload";
+@import "genericscss/fixed-plugin";

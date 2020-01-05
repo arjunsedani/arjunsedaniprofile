@@ -8,6 +8,12 @@
   pointer-events: none;
 }
 
+
+.aframebox {
+  height: 500px;
+  width: 500px;
+  }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

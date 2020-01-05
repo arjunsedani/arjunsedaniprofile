@@ -1,9 +1,38 @@
 import React, { useState, useEffect } from "react";
-import { Button, Typography, Grid, Box, Container } from "@material-ui/core";
+import {
+  Button,
+  Typography,
+  Grid,
+  Box,
+  Container,
+  Tooltip
+} from "@material-ui/core";
+import Card from "../components/MaterialComponents/Card/Card.js";
+import Refresh from "@material-ui/icons/Refresh";
+import Edit from "@material-ui/icons/Edit";
+import CardFooter from "../components/MaterialComponents/Card/CardFooter.js";
+import CardHeader from "../components/MaterialComponents/Card/CardHeader.js";
+import CardBody from "../components/MaterialComponents/Card/CardBody.js";
+import GridContainer from "../components/MaterialComponents/Grid/GridContainer.js";
+import GridItem from "../components/MaterialComponents/Grid/GridItem.js";
+import ArtTrack from "@material-ui/icons/ArtTrack";
 import { makeStyles } from "@material-ui/styles";
 import topphoto from "../assets/topphoto.png";
 import arjunpic from "../assets/arjunpic.jpg";
+import card2 from "../assets/card2.jpeg";
+import CardTravel from "@material-ui/icons/CardTravel";
+import Extension from "@material-ui/icons/Extension";
+import Fingerprint from "@material-ui/icons/Fingerprint";
+import FlightLand from "@material-ui/icons/FlightLand";
+import Build from "@material-ui/icons/Build";
+import Place from "@material-ui/icons/Place";
+import Language from "@material-ui/icons/Language";
+import styles from "../components/MaterialComponents/styles/materialStyles/views/dashboardStyle.js";
+import Timeline from "../components/MaterialComponents/Timeline/Timeline.js";
+import scenegltf from "../assets/scene.glb";
+
 const useStyles = makeStyles(theme => ({
+  ...styles,
   root: {},
   background: {
     backgroundImage: `url(${topphoto})`,
@@ -25,6 +54,11 @@ const useStyles = makeStyles(theme => ({
   nameTitle: {
     marginLeft: 109,
     marginTop: 112
+  },
+  maxSize: {
+    position: "relative",
+    maxWidth: 300,
+    maxHeight: 300
   },
   nameTitle2: {
     marginLeft: 109,
@@ -48,8 +82,68 @@ function Welcome(props) {
     });
   };
 
+  const widgetStories = [
+    {
+      // First story
+      inverted: true,
+      badgeColor: "danger",
+      badgeIcon: CardTravel,
+      title: "Some Title",
+      titleColor: "danger",
+      body: (
+        <p>
+          Wifey made the best Father{"'"}s Day meal ever. So thankful so happy
+          so blessed. Thank you for making my family We just had fun with the
+          “future” theme !!! It was a fun night all together ... The always rude
+          Kanye Show at 2am Sold Out Famous viewing @ Figueroa and 12th in
+          downtown.
+        </p>
+      ),
+      footerTitle: "11 hours ago via Twitter"
+    },
+    {
+      // Second story
+      inverted: true,
+      badgeColor: "success",
+      badgeIcon: Extension,
+      title: "Another One",
+      titleColor: "success",
+      body: (
+        <p>
+          Thank God for the support of my wife and real friends. I also wanted
+          to point out that it’s the first album to go number 1 off of
+          streaming!!! I love you Ellen and also my number one design rule of
+          anything I do from shoes to music to homes is that Kim has to like
+          it....
+        </p>
+      )
+    },
+    {
+      // Third story
+      inverted: true,
+      badgeColor: "info",
+      badgeIcon: Fingerprint,
+      title: "Another Title",
+      titleColor: "info",
+      body: (
+        <div>
+          <p>
+            Called I Miss the Old Kanye That’s all it was Kanye And I love you
+            like Kanye loves Kanye Famous viewing @ Figueroa and 12th in
+            downtown LA 11:10PM
+          </p>
+          <p>
+            What if Kanye made a song about Kanye Royère doesn{"'"}t make a
+            Polar bear bed but the Polar bear couch is my favorite piece of
+            furniture we own It wasn’t any Kanyes Set on his goals Kanye
+          </p>
+        </div>
+      )
+    }
+  ];
+
   return (
-    <div className="App">
+    <div>
       <div className={classes.background}>
         <img
           style={{ display: "none" }}
@@ -196,9 +290,158 @@ function Welcome(props) {
                 the best ideas at Evry's hackathon 2018
               </li>
             </Typography>
+            {/* <Heart /> */}
           </Container>
         </Grid>
       </Grid>
+
+      <Box m="4rem" />
+      <Grid alignItems="center" direction="column" container justify="center">
+        <Grid item>
+          <Typography align="center" variant="h6" marked="center">
+            Portfolio
+          </Typography>
+          <hr className={classes.aboutMe} />
+        </Grid>
+      </Grid>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card product className={classes.cardHover}>
+          <CardHeader image className={classes.cardHeaderHover}>
+              <a href="#pablo" onClick={e => e.preventDefault()}>
+              <iframe
+                // src="https://aframehome1.glitch.me/"
+                src="https://aframeheart.glitch.me/"
+                width="100%"
+                height="400px"
+              ></iframe>
+              </a>
+            </CardHeader>
+            <CardBody>
+              <div className={classes.cardHoverUnder}>
+                <Tooltip
+                  id="tooltip-top"
+                  title="View"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="transparent" simple justIcon>
+                    <ArtTrack className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Edit"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="success" simple justIcon>
+                    <Refresh className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Remove"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="danger" simple justIcon>
+                    <Edit className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+              </div>
+              <h4 className={classes.cardProductTitle}>
+                <a href="#pablo" onClick={e => e.preventDefault()}>
+                  Office Studio
+                </a>
+              </h4>
+              <p className={classes.cardProductDesciprion}>
+                The place is close to Metro Station and bus stop just 2 min by
+                walk and near to {'"'}Naviglio{'"'} where you can enjoy the
+                night life in London, UK.
+              </p>
+            </CardBody>
+            <CardFooter product>
+              <div className={classes.price}>
+                <h4>$1.119/night</h4>
+              </div>
+              <div className={`${classes.stats} ${classes.productStats}`}>
+                <Place /> London, UK
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card product className={classes.cardHover}>
+            <CardHeader image className={classes.cardHeaderHover}>
+              <a href="#pablo" onClick={e => e.preventDefault()}>
+              <iframe
+                // src="https://aframehome1.glitch.me/"
+                src="https://aframeappartment.glitch.me/"
+                width="100%"
+                height="400px"
+              ></iframe>
+              </a>
+            </CardHeader>
+            <CardBody>
+              <div className={classes.cardHoverUnder}>
+                <Tooltip
+                  id="tooltip-top"
+                  title="View"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="transparent" simple justIcon>
+                    <ArtTrack className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Edit"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="success" simple justIcon>
+                    <Refresh className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+                <Tooltip
+                  id="tooltip-top"
+                  title="Remove"
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip }}
+                >
+                  <Button color="danger" simple justIcon>
+                    <Edit className={classes.underChartIcons} />
+                  </Button>
+                </Tooltip>
+              </div>
+              <h4 className={classes.cardProductTitle}>
+                <a href="#pablo" onClick={e => e.preventDefault()}>
+                  Office Studio
+                </a>
+              </h4>
+              <p className={classes.cardProductDesciprion}>
+                The place is close to Metro Station and bus stop just 2 min by
+                walk and near to {'"'}Naviglio{'"'} where you can enjoy the
+                night life in London, UK.
+              </p>
+            </CardBody>
+            <CardFooter product>
+              <div className={classes.price}>
+                <h4>$1.119/night</h4>
+              </div>
+              <div className={`${classes.stats} ${classes.productStats}`}>
+                <Place /> London, UK
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+      </GridContainer>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={4}></GridItem>
+        <Timeline simple stories={widgetStories} />
+      </GridContainer>
     </div>
   );
 }
