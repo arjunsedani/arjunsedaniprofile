@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/arjunsedaniprofile/static/css/main.34de6062.chunk.css",
-    "main.js": "/arjunsedaniprofile/static/js/main.f799d1fa.chunk.js",
-    "main.js.map": "/arjunsedaniprofile/static/js/main.f799d1fa.chunk.js.map",
+    "main.css": "/arjunsedaniprofile/static/css/main.0e1a1a09.chunk.css",
+    "main.js": "/arjunsedaniprofile/static/js/main.3d767d75.chunk.js",
+    "main.js.map": "/arjunsedaniprofile/static/js/main.3d767d75.chunk.js.map",
     "runtime-main.js": "/arjunsedaniprofile/static/js/runtime-main.bbf74602.js",
     "runtime-main.js.map": "/arjunsedaniprofile/static/js/runtime-main.bbf74602.js.map",
-    "static/js/2.746d1e48.chunk.js": "/arjunsedaniprofile/static/js/2.746d1e48.chunk.js",
-    "static/js/2.746d1e48.chunk.js.map": "/arjunsedaniprofile/static/js/2.746d1e48.chunk.js.map",
+    "static/js/2.825be5b9.chunk.js": "/arjunsedaniprofile/static/js/2.825be5b9.chunk.js",
+    "static/js/2.825be5b9.chunk.js.map": "/arjunsedaniprofile/static/js/2.825be5b9.chunk.js.map",
     "index.html": "/arjunsedaniprofile/index.html",
-    "precache-manifest.803898d202f968a9a11db174ddc9fb58.js": "/arjunsedaniprofile/precache-manifest.803898d202f968a9a11db174ddc9fb58.js",
+    "precache-manifest.d1c6f0e443aba808a030dc99d2300e5b.js": "/arjunsedaniprofile/precache-manifest.d1c6f0e443aba808a030dc99d2300e5b.js",
     "service-worker.js": "/arjunsedaniprofile/service-worker.js",
-    "static/css/main.34de6062.chunk.css.map": "/arjunsedaniprofile/static/css/main.34de6062.chunk.css.map",
-    "static/js/2.746d1e48.chunk.js.LICENSE": "/arjunsedaniprofile/static/js/2.746d1e48.chunk.js.LICENSE",
+    "static/css/main.0e1a1a09.chunk.css.map": "/arjunsedaniprofile/static/css/main.0e1a1a09.chunk.css.map",
+    "static/js/2.825be5b9.chunk.js.LICENSE": "/arjunsedaniprofile/static/js/2.825be5b9.chunk.js.LICENSE",
     "static/media/arjunpic.jpg": "/arjunsedaniprofile/static/media/arjunpic.cf476cc0.jpg",
+    "static/media/card2.jpeg": "/arjunsedaniprofile/static/media/card2.ae10829f.jpeg",
+    "static/media/scene.glb": "/arjunsedaniprofile/static/media/scene.f122fa1a.glb",
     "static/media/topphoto.png": "/arjunsedaniprofile/static/media/topphoto.5bbc11d7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bbf74602.js",
-    "static/js/2.746d1e48.chunk.js",
-    "static/css/main.34de6062.chunk.css",
-    "static/js/main.f799d1fa.chunk.js"
+    "static/js/2.825be5b9.chunk.js",
+    "static/css/main.0e1a1a09.chunk.css",
+    "static/js/main.3d767d75.chunk.js"
   ]
 }
