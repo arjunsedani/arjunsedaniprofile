@@ -634,7 +634,7 @@ function Welcome(props) {
                   height="400px"
                 ></iframe> */}
                 <iframe
-                  src="http://media.licdn.com/embeds/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F-1nqzARfQI4&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D-1nqzARfQI4&amp;type=text%2Fhtml&amp;schema=youtube"
+                  src="https://www.youtube.com/embed/-1nqzARfQI4"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
