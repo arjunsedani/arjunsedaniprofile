@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/arjunsedaniprofile/static/css/main.c1bf27ba.chunk.css",
-    "main.js": "/arjunsedaniprofile/static/js/main.a221463e.chunk.js",
-    "main.js.map": "/arjunsedaniprofile/static/js/main.a221463e.chunk.js.map",
+    "main.js": "/arjunsedaniprofile/static/js/main.0cee37dc.chunk.js",
+    "main.js.map": "/arjunsedaniprofile/static/js/main.0cee37dc.chunk.js.map",
     "runtime-main.js": "/arjunsedaniprofile/static/js/runtime-main.1e61ac57.js",
     "runtime-main.js.map": "/arjunsedaniprofile/static/js/runtime-main.1e61ac57.js.map",
     "static/css/2.d37263c3.chunk.css": "/arjunsedaniprofile/static/css/2.d37263c3.chunk.css",
     "static/js/2.cc52ecd0.chunk.js": "/arjunsedaniprofile/static/js/2.cc52ecd0.chunk.js",
     "static/js/2.cc52ecd0.chunk.js.map": "/arjunsedaniprofile/static/js/2.cc52ecd0.chunk.js.map",
     "index.html": "/arjunsedaniprofile/index.html",
-    "precache-manifest.c75c37d9277df8417b43fed9fa0fa0bb.js": "/arjunsedaniprofile/precache-manifest.c75c37d9277df8417b43fed9fa0fa0bb.js",
+    "precache-manifest.a25fb2b68510ad687fd161e9fa14f145.js": "/arjunsedaniprofile/precache-manifest.a25fb2b68510ad687fd161e9fa14f145.js",
     "service-worker.js": "/arjunsedaniprofile/service-worker.js",
     "static/css/2.d37263c3.chunk.css.map": "/arjunsedaniprofile/static/css/2.d37263c3.chunk.css.map",
     "static/css/main.c1bf27ba.chunk.css.map": "/arjunsedaniprofile/static/css/main.c1bf27ba.chunk.css.map",
@@ -25,6 +25,6 @@
     "static/css/2.d37263c3.chunk.css",
     "static/js/2.cc52ecd0.chunk.js",
     "static/css/main.c1bf27ba.chunk.css",
-    "static/js/main.a221463e.chunk.js"
+    "static/js/main.0cee37dc.chunk.js"
   ]
 }

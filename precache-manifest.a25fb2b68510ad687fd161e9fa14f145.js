@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bbd87f34965c277faccc21e90e14aefe",
+    "revision": "6290bd115798db4e82d81c86182b8943",
     "url": "/arjunsedaniprofile/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/arjunsedaniprofile/static/css/2.d37263c3.chunk.css"
   },
   {
-    "revision": "06e07470d8d2a83070a4",
+    "revision": "95c13c95bc4245dde90c",
     "url": "/arjunsedaniprofile/static/css/main.c1bf27ba.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/arjunsedaniprofile/static/js/2.cc52ecd0.chunk.js.LICENSE"
   },
   {
-    "revision": "06e07470d8d2a83070a4",
-    "url": "/arjunsedaniprofile/static/js/main.a221463e.chunk.js"
+    "revision": "95c13c95bc4245dde90c",
+    "url": "/arjunsedaniprofile/static/js/main.0cee37dc.chunk.js"
   },
   {
     "revision": "148cc4a863528ecd370a",
