@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6290bd115798db4e82d81c86182b8943",
+    "revision": "8f283ab7e6c1b7d351340dc0126d26d7",
     "url": "/arjunsedaniprofile/index.html"
   },
   {
-    "revision": "f6a899c2e2d698229976",
-    "url": "/arjunsedaniprofile/static/css/2.d37263c3.chunk.css"
+    "revision": "0c26d8fe7b332504e744",
+    "url": "/arjunsedaniprofile/static/css/2.0fac76ea.chunk.css"
   },
   {
-    "revision": "95c13c95bc4245dde90c",
+    "revision": "437906b511cefea9c74f",
     "url": "/arjunsedaniprofile/static/css/main.c1bf27ba.chunk.css"
   },
   {
-    "revision": "f6a899c2e2d698229976",
-    "url": "/arjunsedaniprofile/static/js/2.cc52ecd0.chunk.js"
+    "revision": "0c26d8fe7b332504e744",
+    "url": "/arjunsedaniprofile/static/js/2.dcca7fcf.chunk.js"
   },
   {
     "revision": "1f1f5991ba4bb7992f78bfc79a12aef1",
-    "url": "/arjunsedaniprofile/static/js/2.cc52ecd0.chunk.js.LICENSE"
+    "url": "/arjunsedaniprofile/static/js/2.dcca7fcf.chunk.js.LICENSE"
   },
   {
-    "revision": "95c13c95bc4245dde90c",
-    "url": "/arjunsedaniprofile/static/js/main.0cee37dc.chunk.js"
+    "revision": "437906b511cefea9c74f",
+    "url": "/arjunsedaniprofile/static/js/main.575f4990.chunk.js"
   },
   {
     "revision": "148cc4a863528ecd370a",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cf476cc0dca6da1133417fb1af88ad23",
     "url": "/arjunsedaniprofile/static/media/arjunpic.cf476cc0.jpg"
+  },
+  {
+    "revision": "89c46bb02e8ae18c96eac1a6bcb4c932",
+    "url": "/arjunsedaniprofile/static/media/arjunsedaniresume.89c46bb0.pdf"
   },
   {
     "revision": "ae10829f019b0103525a6cd1102ee213",
