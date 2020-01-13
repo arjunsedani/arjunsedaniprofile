@@ -5,7 +5,8 @@ import {
   Grid,
   Box,
   Container,
-  Tooltip
+  Tooltip,
+  Fab
 } from "@material-ui/core";
 import Card from "../components/MaterialComponents/Card/Card.js";
 import Refresh from "@material-ui/icons/Refresh";
@@ -24,14 +25,15 @@ import unifiedgamification from "../assets/unifiedgamification.png";
 import CardTravel from "@material-ui/icons/CardTravel";
 import Extension from "@material-ui/icons/Extension";
 import Fingerprint from "@material-ui/icons/Fingerprint";
-import FlightLand from "@material-ui/icons/FlightLand";
-import Build from "@material-ui/icons/Build";
-import Place from "@material-ui/icons/Place";
-import Language from "@material-ui/icons/Language";
+import GetAppIcon from "@material-ui/icons/GetApp";
 import styles from "../components/MaterialComponents/styles/materialStyles/views/dashboardStyle.js";
 import Timeline from "../components/MaterialComponents/Timeline/Timeline.js";
 import Slider from "react-slick";
 import styled, { css } from "styled-components";
+import PdfFile from "../assets/arjunsedaniresume.pdf";
+import PhoneIcon from "@material-ui/icons/Phone";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -300,9 +302,66 @@ function Welcome(props) {
                 variant="h5"
                 className={classes.typography1}
               >
-                React Developer | React Developer | UX Developer
+                React Developer | React Native Developer | UX Developer
               </Typography>
             </Container>
+          </Grid>
+          <Grid
+            alignItems="flex-start"
+            direction="row"
+            container
+            justify="flex-start"
+          >
+            <Grid item>
+              <Box m="1rem" />
+              <Container maxWidth="md">
+                <Grid
+                  alignItems="center"
+                  direction="column"
+                  container
+                  justify="space-around"
+                >
+                  <Grid item>
+                    <PhoneIcon className={classes.typography1} />
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      align="flex-start"
+                      variant="body2"
+                      marked="flex-start"
+                      className={classes.typography1}
+                    >
+                      +917016926698
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Container>
+            </Grid>
+            <Grid item>
+              <Box m="1rem" />
+              <Container maxWidth="md">
+                <Grid
+                  alignItems="center"
+                  direction="column"
+                  container
+                  justify="space-around"
+                >
+                  <Grid item>
+                    <MailOutlineIcon className={classes.typography1} />
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      align="flex-start"
+                      variant="body2"
+                      marked="flex-start"
+                      className={classes.typography1}
+                    >
+                      sedaniarjun@gmail.com
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Container>
+            </Grid>
           </Grid>
           <Grid item>
             <Box m="2rem" />
@@ -372,6 +431,22 @@ function Welcome(props) {
           </Container>
         </Grid>
       </Grid>
+
+      <Grid alignItems="center" direction="column" container justify="center">
+        <Grid item>
+          <a href={PdfFile} target="_blank">
+            <Button
+              variant="contained"
+              color="default"
+              className={classes.button}
+              startIcon={<GetAppIcon />}
+            >
+              Download
+            </Button>
+          </a>
+        </Grid>
+      </Grid>
+      <Box m="4rem" />
 
       <Box m="4rem" />
       <Grid alignItems="center" direction="column" container justify="center">
@@ -689,9 +764,7 @@ function Welcome(props) {
               </p>
             </CardBody>
             <CardFooter product>
-              <div className={classes.price}>
-                {/* <h4>$1.119/night</h4> */}
-              </div>
+              <div className={classes.price}>{/* <h4>$1.119/night</h4> */}</div>
               <div className={`${classes.stats} ${classes.productStats}`}>
                 {/* <Place /> London, UK */}
               </div>
@@ -702,8 +775,8 @@ function Welcome(props) {
           <Card product className={classes.cardHover}>
             <CardHeader image className={classes.cardHeaderHover}>
               <a href="#pablo" onClick={e => e.preventDefault()}>
-              <iframe
-                   src="https://www.youtube.com/embed/aR7nt91wRQk"
+                <iframe
+                  src="https://www.youtube.com/embed/aR7nt91wRQk"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
@@ -760,9 +833,7 @@ function Welcome(props) {
               </p>
             </CardBody>
             <CardFooter product>
-              <div className={classes.price}>
-                {/* <h4>$1.119/night</h4> */}
-              </div>
+              <div className={classes.price}>{/* <h4>$1.119/night</h4> */}</div>
               <div className={`${classes.stats} ${classes.productStats}`}>
                 {/* <Place /> London, UK */}
               </div>
@@ -826,9 +897,7 @@ function Welcome(props) {
               </p>
             </CardBody>
             <CardFooter product>
-              <div className={classes.price}>
-                {/* <h4>$1.119/night</h4> */}
-              </div>
+              <div className={classes.price}>{/* <h4>$1.119/night</h4> */}</div>
               <div className={`${classes.stats} ${classes.productStats}`}>
                 {/* <Place /> London, UK */}
               </div>
@@ -849,6 +918,93 @@ function Welcome(props) {
         <GridItem xs={12} sm={12} md={4}></GridItem>
         <Timeline simple stories={widgetStories} />
       </GridContainer>
+
+      <Grid alignItems="center" direction="column" container justify="center">
+        <Grid item>
+          <Typography align="center" variant="h6" marked="center">
+            Contact
+          </Typography>
+          <hr className={classes.aboutMe} />
+        </Grid>
+      </Grid>
+      <Box m="4rem" />
+      <Grid
+        alignItems="center"
+        direction="row"
+        container
+        justify="space-around"
+      >
+        <Grid item>
+          <Container maxWidth="md">
+            <Grid
+              alignItems="center"
+              direction="column"
+              container
+              justify="space-around"
+            >
+              <Grid item>
+                <MailOutlineIcon />
+              </Grid>
+              <Grid item>
+                <Typography
+                  align="flex-start"
+                  variant="body2"
+                  marked="flex-start"
+                >
+                  sedaniarjun@gmail.com
+                </Typography>
+              </Grid>
+            </Grid>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container maxWidth="md">
+            <Grid
+              alignItems="center"
+              direction="column"
+              container
+              justify="space-around"
+            >
+              <Grid item>
+                <LinkedInIcon />
+              </Grid>
+              <Grid item>
+                <Typography
+                  align="flex-start"
+                  variant="body2"
+                  marked="flex-start"
+                >
+                  https://www.linkedin.com/in/arjun-sedani-349575128/
+                </Typography>
+              </Grid>
+            </Grid>
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container maxWidth="md">
+            <Grid
+              alignItems="center"
+              direction="column"
+              container
+              justify="space-around"
+            >
+              <Grid item>
+                <PhoneIcon />
+              </Grid>
+              <Grid item>
+                <Typography
+                  align="flex-start"
+                  variant="body2"
+                  marked="flex-start"
+                >
+                  +917016926698
+                </Typography>
+              </Grid>
+            </Grid>
+          </Container>
+        </Grid>
+      </Grid>
+      <Box m="4rem" />
     </div>
   );
 }
